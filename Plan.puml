@@ -1,0 +1,29 @@
+@startuml
+class Carro{
+tipo
+valor
+}
+class Parqueadero{
+espacio_total
+espacio_com
+espacio_suv
+espacio_van
+cobro_tiempo()
+espacio_restante()
+}
+
+class Usuario{
+(Abstract)
+cuenta
+registrarse()
+reserva()
+}
+
+class Abstract{
+valor_cuenta()
+}
+
+Usuario --o Parqueadero
+Carro <|-- Usuario
+
+@enduml
